@@ -1,4 +1,4 @@
-const BinaryTreeNode = require('./binary-tree-node');
+ttier const BinaryTreeNode = require('./binary-tree-node');
 
 const {
   leftRotation,
