@@ -19,7 +19,7 @@ const {
  *
  * @param {BinaryTreeNode} node
  */
-function balance(node) {
+const balance = node => {
   if (node.balanceFactor > 1) {
     // left subtree is higher than right subtree
     if (node.left.balanceFactor < 0) {
@@ -35,7 +35,8 @@ function balance(node) {
     return leftRotation(node);
   }
   return node;
-}
+};
+
 // end::balance[]
 
 // tag::balanceUpstream[]

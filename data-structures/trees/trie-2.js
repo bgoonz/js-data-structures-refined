@@ -39,11 +39,13 @@ class Trie {
    * @returns {boolean}
    */
   removeHelper(word, parent = this, index = 0, meta = { stop: 0 }) {
-    if (index === word.length) {
+    switch (index) {
+    case word.length:
       parent.isWord = false;
       if (Object.keys(parent.children)) { meta.stop = index; }
       return true;
     }
+
     const child = parent.children[word.charAt(index)];
     if (!child) { return false; }
     if (parent.isWord) { meta.stop = index; }

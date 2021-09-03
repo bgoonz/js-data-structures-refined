@@ -38,9 +38,12 @@ function sort(array = []) {
   if (size < 2) {
     return array;
   }
-  if (size === 2) {
+
+  switch (size) {
+  case 2:
     return array[0] > array[1] ? [array[1], array[0]] : array;
   }
+
   // slit and merge
   const mid = parseInt(size / 2, 10);
   return merge(sort(array.slice(0, mid)), sort(array.slice(mid)));

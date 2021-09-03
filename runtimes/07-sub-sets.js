@@ -13,7 +13,7 @@ const assert = require("assert");
  * @param {string|array} n
  * @returns {array} all the subsets (including empty and set itself).
  */
-function findSubsets(n = "") {
+const findSubsets = (n = "") => {
   const array = Array.from(n);
   const base = [""]; // <1>
 
@@ -23,7 +23,8 @@ function findSubsets(n = "") {
   }, base);
 
   return results;
-}
+};
+
 // end::snippet[]
 
 assert.deepStrictEqual(findSubsets(), [""]);
