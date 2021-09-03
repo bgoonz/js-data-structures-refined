@@ -1,4 +1,4 @@
-preclass Trie {
+class Trie {
   constructor(val) {
     this.val = val;
     this.children = {};
